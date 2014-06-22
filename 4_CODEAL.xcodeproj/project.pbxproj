@@ -22,6 +22,7 @@
 		2EFAA56A1956C71000E40081 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA5681956C71000E40081 /* InfoPlist.strings */; };
 		2EFAA56C1956C71000E40081 /* __CODEALTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAA56B1956C71000E40081 /* __CODEALTests.m */; };
 		2EFAA5771956C76500E40081 /* OwnMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAA5761956C76500E40081 /* OwnMessage.m */; };
+		2EFAA5791956C7C900E40081 /* OwnMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA5781956C7C900E40081 /* OwnMessage.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		2EFAA56B1956C71000E40081 /* __CODEALTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __CODEALTests.m; sourceTree = "<group>"; };
 		2EFAA5751956C76500E40081 /* OwnMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnMessage.h; sourceTree = "<group>"; };
 		2EFAA5761956C76500E40081 /* OwnMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnMessage.m; sourceTree = "<group>"; };
+		2EFAA5781956C7C900E40081 /* OwnMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OwnMessage.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				2EFAA5471956C71000E40081 /* Supporting Files */,
 				2EFAA5751956C76500E40081 /* OwnMessage.h */,
 				2EFAA5761956C76500E40081 /* OwnMessage.m */,
+				2EFAA5781956C7C900E40081 /* OwnMessage.xib */,
 			);
 			path = 4_CODEAL;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFAA5791956C7C900E40081 /* OwnMessage.xib in Resources */,
 				2EFAA5591956C71000E40081 /* Images.xcassets in Resources */,
 				2EFAA54B1956C71000E40081 /* InfoPlist.strings in Resources */,
 				2EFAA5541956C71000E40081 /* Main.storyboard in Resources */,
