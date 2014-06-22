@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OwnMessage.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    OwnMessage *ownMessageView = [[OwnMessage alloc] init];
+    ownMessageView.frame = CGRectMake(0, 30, 320, 140);
+    [self.view addSubview:ownMessageView];
 }
 
 - (void)didReceiveMemoryWarning

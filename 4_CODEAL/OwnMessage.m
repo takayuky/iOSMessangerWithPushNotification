@@ -8,6 +8,12 @@
 
 #import "OwnMessage.h"
 
+@interface OwnMessage ()
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+@end
+
 @implementation OwnMessage
 
 - (id)initWithFrame:(CGRect)frame
@@ -15,6 +21,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        UINib *nib = [UINib nibWithNibName:@"OwnMessage" bundle:[NSBundle mainBundle]];
+        NSArray *array = [nib instantiateWithOwner:self options:nil];
+        self = [array objectAtIndex:0];
     }
     return self;
 }
