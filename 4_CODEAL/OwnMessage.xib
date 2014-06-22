@@ -17,6 +17,10 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user_offline_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="rDE-Wv-uAj">
+                    <rect key="frame" x="271" y="60" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <connections>
@@ -24,4 +28,7 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="user_offline_icon.png" width="17" height="17"/>
+    </resources>
 </document>
