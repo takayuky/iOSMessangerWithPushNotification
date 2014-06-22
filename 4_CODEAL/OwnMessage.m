@@ -24,6 +24,8 @@
         UINib *nib = [UINib nibWithNibName:@"OwnMessage" bundle:[NSBundle mainBundle]];
         NSArray *array = [nib instantiateWithOwner:self options:nil];
         self = [array objectAtIndex:0];
+        
+        [self.label setTextAlignment:NSTextAlignmentRight];
     }
     return self;
 }
