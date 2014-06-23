@@ -45,6 +45,7 @@ int _messageHeight = 150;
     
     _scrollHeight += _messageHeight;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
+    [self scrollToBottom];
 }
 
 - (void)setOtherMessageViewWithMessage:(NSString*)message {
@@ -55,6 +56,20 @@ int _messageHeight = 150;
     
     _scrollHeight += _messageHeight;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
+    [self scrollToBottom];
+}
+
+- (IBAction)ownBtnPush:(id)sender {
+    [self setOwnMessageViewWithMessage:@"I'm Own!"];
+}
+
+- (IBAction)otherBtnPush:(id)sender {
+    [self setOtherMessageViewWithMessage:@"I'm Other!"];
+}
+
+- (void) scrollToBottom {
+    CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
+    [self.scrollView setContentOffset:bottomOffset animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
