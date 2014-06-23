@@ -21,6 +21,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     OwnMessage *ownMessageView = [[OwnMessage alloc] init];
     ownMessageView.frame = CGRectMake(0, 30, 320, 140);
+    [ownMessageView setMessage:@"Hello method!"];
     [self.view addSubview:ownMessageView];
 }
 

@@ -30,6 +30,10 @@
     return self;
 }
 
+- (void) setMessage:(NSString *)message {
+    self.label.text = message;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

@@ -10,4 +10,6 @@
 
 @interface OwnMessage : UIView
 
+- (void) setMessage:(NSString*)message;
+
 @end
