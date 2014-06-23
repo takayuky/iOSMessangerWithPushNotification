@@ -41,6 +41,8 @@
 		2EFAA59C1956C9D100E40081 /* user_offline_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA58A1956C9D100E40081 /* user_offline_icon@2x.png */; };
 		2EFAA59D1956C9D100E40081 /* user_online_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA58B1956C9D100E40081 /* user_online_icon.png */; };
 		2EFAA59E1956C9D100E40081 /* user_online_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA58C1956C9D100E40081 /* user_online_icon@2x.png */; };
+		2EFAA5A61958004800E40081 /* OtherMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFAA5A51958004800E40081 /* OtherMessage.m */; };
+		2EFAA5A81958006400E40081 /* OtherMessage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EFAA5A71958006400E40081 /* OtherMessage.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,9 @@
 		2EFAA58A1956C9D100E40081 /* user_offline_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_offline_icon@2x.png"; sourceTree = "<group>"; };
 		2EFAA58B1956C9D100E40081 /* user_online_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_online_icon.png; sourceTree = "<group>"; };
 		2EFAA58C1956C9D100E40081 /* user_online_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_online_icon@2x.png"; sourceTree = "<group>"; };
+		2EFAA5A41958004700E40081 /* OtherMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherMessage.h; sourceTree = "<group>"; };
+		2EFAA5A51958004800E40081 /* OtherMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherMessage.m; sourceTree = "<group>"; };
+		2EFAA5A71958006400E40081 /* OtherMessage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherMessage.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +169,9 @@
 				2EFAA5751956C76500E40081 /* OwnMessage.h */,
 				2EFAA5761956C76500E40081 /* OwnMessage.m */,
 				2EFAA5781956C7C900E40081 /* OwnMessage.xib */,
+				2EFAA5A41958004700E40081 /* OtherMessage.h */,
+				2EFAA5A51958004800E40081 /* OtherMessage.m */,
+				2EFAA5A71958006400E40081 /* OtherMessage.xib */,
 			);
 			path = 4_CODEAL;
 			sourceTree = "<group>";
@@ -310,6 +318,7 @@
 				2EFAA5971956C9D100E40081 /* user_away_icon.png in Resources */,
 				2EFAA58F1956C9D100E40081 /* hu_right_arrow.png in Resources */,
 				2EFAA5931956C9D100E40081 /* no_messages_icon.png in Resources */,
+				2EFAA5A81958006400E40081 /* OtherMessage.xib in Resources */,
 				2EFAA59C1956C9D100E40081 /* user_offline_icon@2x.png in Resources */,
 				2EFAA5951956C9D100E40081 /* not_in_favorites_icon.png in Resources */,
 				2EFAA54B1956C71000E40081 /* InfoPlist.strings in Resources */,
@@ -341,6 +350,7 @@
 				2EFAA5771956C76500E40081 /* OwnMessage.m in Sources */,
 				2EFAA5571956C71000E40081 /* ViewController.m in Sources */,
 				2EFAA5511956C71000E40081 /* AppDelegate.m in Sources */,
+				2EFAA5A61958004800E40081 /* OtherMessage.m in Sources */,
 				2EFAA54D1956C71000E40081 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +556,7 @@
 				2EFAA5711956C71000E40081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EFAA5721956C71000E40081 /* Build configuration list for PBXNativeTarget "4_CODEALTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +565,7 @@
 				2EFAA5741956C71000E40081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
