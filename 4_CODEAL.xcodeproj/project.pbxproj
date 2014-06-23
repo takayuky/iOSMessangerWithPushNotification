@@ -165,13 +165,13 @@
 				2EFAA5551956C71000E40081 /* ViewController.h */,
 				2EFAA5561956C71000E40081 /* ViewController.m */,
 				2EFAA5581956C71000E40081 /* Images.xcassets */,
-				2EFAA5471956C71000E40081 /* Supporting Files */,
 				2EFAA5751956C76500E40081 /* OwnMessage.h */,
 				2EFAA5761956C76500E40081 /* OwnMessage.m */,
 				2EFAA5781956C7C900E40081 /* OwnMessage.xib */,
 				2EFAA5A41958004700E40081 /* OtherMessage.h */,
 				2EFAA5A51958004800E40081 /* OtherMessage.m */,
 				2EFAA5A71958006400E40081 /* OtherMessage.xib */,
+				2EFAA5471956C71000E40081 /* Supporting Files */,
 			);
 			path = 4_CODEAL;
 			sourceTree = "<group>";

@@ -8,6 +8,12 @@
 
 #import "OtherMessage.h"
 
+@interface OtherMessage ()
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+@end
+
 @implementation OtherMessage
 
 - (id)initWithFrame:(CGRect)frame
@@ -15,8 +21,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        UINib *nib = [UINib nibWithNibName:@"OtherMessage" bundle:[NSBundle mainBundle]];
+        NSArray *array = [nib instantiateWithOwner:self options:nil];
+        self = [array objectAtIndex:0];
+        
+        [self.label setTextAlignment:NSTextAlignmentRight];
     }
     return self;
+}
+
+- (void) setMessage:(NSString *)message {
+    self.label.text = message;
 }
 
 /*

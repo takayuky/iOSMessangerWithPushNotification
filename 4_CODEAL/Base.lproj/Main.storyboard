@@ -17,16 +17,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-vy-cj0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG7-hX-Nm3">
+                                <rect key="frame" x="0.0" y="538" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Other">
+                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-vw-Sls">
+                                <rect key="frame" x="160" y="538" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Own">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Gwa-vy-cj0" secondAttribute="trailing" id="0a1-2U-uN3"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="6E9-Uw-MHr"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gwa-vy-cj0" secondAttribute="bottom" id="U4E-sA-5Hi"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="pXa-46-ZnL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gwa-vy-cj0" secondAttribute="bottom" constant="30" id="Ev3-F8-UIk"/>
+                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PFg-fc-Q5R"/>
+                            <constraint firstAttribute="trailing" secondItem="Gwa-vy-cj0" secondAttribute="trailing" id="Zcg-2V-u2d"/>
+                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dNK-K6-lFE"/>
                         </constraints>
                     </view>
                     <connections>
