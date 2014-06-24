@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2EFAA53C1956C71000E40081"
-               BuildableName = "4_CODEAL.app"
-               BlueprintName = "4_CODEAL"
-               ReferencedContainer = "container:4_CODEAL.xcodeproj">
+               BuildableName = "iPhonePushMessager.app"
+               BlueprintName = "iPhonePushMessager"
+               ReferencedContainer = "container:iPhonePushMessager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2EFAA55D1956C71000E40081"
-               BuildableName = "4_CODEALTests.xctest"
-               BlueprintName = "4_CODEALTests"
-               ReferencedContainer = "container:4_CODEAL.xcodeproj">
+               BuildableName = "iPhonePushMessagerTests.xctest"
+               BlueprintName = "iPhonePushMessagerTests"
+               ReferencedContainer = "container:iPhonePushMessager.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2EFAA53C1956C71000E40081"
-            BuildableName = "4_CODEAL.app"
-            BlueprintName = "4_CODEAL"
-            ReferencedContainer = "container:4_CODEAL.xcodeproj">
+            BuildableName = "iPhonePushMessager.app"
+            BlueprintName = "iPhonePushMessager"
+            ReferencedContainer = "container:iPhonePushMessager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2EFAA53C1956C71000E40081"
-            BuildableName = "4_CODEAL.app"
-            BlueprintName = "4_CODEAL"
-            ReferencedContainer = "container:4_CODEAL.xcodeproj">
+            BuildableName = "iPhonePushMessager.app"
+            BlueprintName = "iPhonePushMessager"
+            ReferencedContainer = "container:iPhonePushMessager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2EFAA53C1956C71000E40081"
-            BuildableName = "4_CODEAL.app"
-            BlueprintName = "4_CODEAL"
-            ReferencedContainer = "container:4_CODEAL.xcodeproj">
+            BuildableName = "iPhonePushMessager.app"
+            BlueprintName = "iPhonePushMessager"
+            ReferencedContainer = "container:iPhonePushMessager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

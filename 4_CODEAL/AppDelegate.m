@@ -14,15 +14,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // ****************************************************************************
-    // Uncomment and fill in with your Parse credentials:
     [Parse setApplicationId:@"X7xu5qRzoMuLBGH0zUdqN0OvtDlWQIJvuRNimYNk" clientKey:@"vw2PFbuZXRIHuoVdwHRxI4AyYu4KGbPgUgRU35ew"];
-    // ****************************************************************************
     
     // Override point for customization after application launch.
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

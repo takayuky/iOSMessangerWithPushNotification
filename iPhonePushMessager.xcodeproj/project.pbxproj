@@ -66,23 +66,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2EFAA53D1956C71000E40081 /* 4_CODEAL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4_CODEAL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFAA53D1956C71000E40081 /* iPhonePushMessager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhonePushMessager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFAA5401956C71000E40081 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2EFAA5421956C71000E40081 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2EFAA5441956C71000E40081 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2EFAA5481956C71000E40081 /* 4_CODEAL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "4_CODEAL-Info.plist"; sourceTree = "<group>"; };
+		2EFAA5481956C71000E40081 /* iPhonePushMessager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPhonePushMessager-Info.plist"; sourceTree = "<group>"; };
 		2EFAA54A1956C71000E40081 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EFAA54C1956C71000E40081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2EFAA54E1956C71000E40081 /* 4_CODEAL-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "4_CODEAL-Prefix.pch"; sourceTree = "<group>"; };
+		2EFAA54E1956C71000E40081 /* iPhonePushMessager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iPhonePushMessager-Prefix.pch"; sourceTree = "<group>"; };
 		2EFAA54F1956C71000E40081 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2EFAA5501956C71000E40081 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2EFAA5531956C71000E40081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EFAA5551956C71000E40081 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2EFAA5561956C71000E40081 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2EFAA5581956C71000E40081 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2EFAA55E1956C71000E40081 /* 4_CODEALTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 4_CODEALTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFAA55E1956C71000E40081 /* iPhonePushMessagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhonePushMessagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFAA55F1956C71000E40081 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2EFAA5671956C71000E40081 /* 4_CODEALTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "4_CODEALTests-Info.plist"; sourceTree = "<group>"; };
+		2EFAA5671956C71000E40081 /* iPhonePushMessagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iPhonePushMessagerTests-Info.plist"; sourceTree = "<group>"; };
 		2EFAA5691956C71000E40081 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2EFAA56B1956C71000E40081 /* __CODEALTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __CODEALTests.m; sourceTree = "<group>"; };
 		2EFAA5751956C76500E40081 /* OwnMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnMessage.h; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 		2EFAA53E1956C71000E40081 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2EFAA53D1956C71000E40081 /* 4_CODEAL.app */,
-				2EFAA55E1956C71000E40081 /* 4_CODEALTests.xctest */,
+				2EFAA53D1956C71000E40081 /* iPhonePushMessager.app */,
+				2EFAA55E1956C71000E40081 /* iPhonePushMessagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,13 +204,13 @@
 				2EFAA5521956C71000E40081 /* Main.storyboard */,
 				2EFAA5551956C71000E40081 /* ViewController.h */,
 				2EFAA5561956C71000E40081 /* ViewController.m */,
-				2EFAA5581956C71000E40081 /* Images.xcassets */,
 				2EFAA5751956C76500E40081 /* OwnMessage.h */,
 				2EFAA5761956C76500E40081 /* OwnMessage.m */,
 				2EFAA5781956C7C900E40081 /* OwnMessage.xib */,
 				2EFAA5A41958004700E40081 /* OtherMessage.h */,
 				2EFAA5A51958004800E40081 /* OtherMessage.m */,
 				2EFAA5A71958006400E40081 /* OtherMessage.xib */,
+				2EFAA5581956C71000E40081 /* Images.xcassets */,
 				2EFAA5471956C71000E40081 /* Supporting Files */,
 			);
 			path = 4_CODEAL;
@@ -219,10 +219,10 @@
 		2EFAA5471956C71000E40081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2EFAA5481956C71000E40081 /* 4_CODEAL-Info.plist */,
+				2EFAA5481956C71000E40081 /* iPhonePushMessager-Info.plist */,
 				2EFAA5491956C71000E40081 /* InfoPlist.strings */,
 				2EFAA54C1956C71000E40081 /* main.m */,
-				2EFAA54E1956C71000E40081 /* 4_CODEAL-Prefix.pch */,
+				2EFAA54E1956C71000E40081 /* iPhonePushMessager-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 		2EFAA5661956C71000E40081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2EFAA5671956C71000E40081 /* 4_CODEALTests-Info.plist */,
+				2EFAA5671956C71000E40081 /* iPhonePushMessagerTests-Info.plist */,
 				2EFAA5681956C71000E40081 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -273,9 +273,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2EFAA53C1956C71000E40081 /* 4_CODEAL */ = {
+		2EFAA53C1956C71000E40081 /* iPhonePushMessager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EFAA56F1956C71000E40081 /* Build configuration list for PBXNativeTarget "4_CODEAL" */;
+			buildConfigurationList = 2EFAA56F1956C71000E40081 /* Build configuration list for PBXNativeTarget "iPhonePushMessager" */;
 			buildPhases = (
 				2EFAA5391956C71000E40081 /* Sources */,
 				2EFAA53A1956C71000E40081 /* Frameworks */,
@@ -285,14 +285,14 @@
 			);
 			dependencies = (
 			);
-			name = 4_CODEAL;
+			name = iPhonePushMessager;
 			productName = 4_CODEAL;
-			productReference = 2EFAA53D1956C71000E40081 /* 4_CODEAL.app */;
+			productReference = 2EFAA53D1956C71000E40081 /* iPhonePushMessager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2EFAA55D1956C71000E40081 /* 4_CODEALTests */ = {
+		2EFAA55D1956C71000E40081 /* iPhonePushMessagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EFAA5721956C71000E40081 /* Build configuration list for PBXNativeTarget "4_CODEALTests" */;
+			buildConfigurationList = 2EFAA5721956C71000E40081 /* Build configuration list for PBXNativeTarget "iPhonePushMessagerTests" */;
 			buildPhases = (
 				2EFAA55A1956C71000E40081 /* Sources */,
 				2EFAA55B1956C71000E40081 /* Frameworks */,
@@ -303,9 +303,9 @@
 			dependencies = (
 				2EFAA5641956C71000E40081 /* PBXTargetDependency */,
 			);
-			name = 4_CODEALTests;
+			name = iPhonePushMessagerTests;
 			productName = 4_CODEALTests;
-			productReference = 2EFAA55E1956C71000E40081 /* 4_CODEALTests.xctest */;
+			productReference = 2EFAA55E1956C71000E40081 /* iPhonePushMessagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -317,12 +317,15 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = CODEAL;
 				TargetAttributes = {
+					2EFAA53C1956C71000E40081 = {
+						DevelopmentTeam = XG37UY9337;
+					};
 					2EFAA55D1956C71000E40081 = {
 						TestTargetID = 2EFAA53C1956C71000E40081;
 					};
 				};
 			};
-			buildConfigurationList = 2EFAA5381956C71000E40081 /* Build configuration list for PBXProject "4_CODEAL" */;
+			buildConfigurationList = 2EFAA5381956C71000E40081 /* Build configuration list for PBXProject "iPhonePushMessager" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -335,8 +338,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2EFAA53C1956C71000E40081 /* 4_CODEAL */,
-				2EFAA55D1956C71000E40081 /* 4_CODEALTests */,
+				2EFAA53C1956C71000E40081 /* iPhonePushMessager */,
+				2EFAA55D1956C71000E40081 /* iPhonePushMessagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,7 +411,7 @@
 /* Begin PBXTargetDependency section */
 		2EFAA5641956C71000E40081 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2EFAA53C1956C71000E40081 /* 4_CODEAL */;
+			target = 2EFAA53C1956C71000E40081 /* iPhonePushMessager */;
 			targetProxy = 2EFAA5631956C71000E40081 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -475,6 +478,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "E3AEC0D9-78B4-42F3-A479-E1EAB52B767B";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -506,6 +510,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "E3AEC0D9-78B4-42F3-A479-E1EAB52B767B";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -516,14 +521,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "4_CODEAL/4_CODEAL-Prefix.pch";
-				INFOPLIST_FILE = "4_CODEAL/4_CODEAL-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "4_CODEAL/iPhonePushMessager-Prefix.pch";
+				INFOPLIST_FILE = "4_CODEAL/iPhonePushMessager-Info.plist";
+				PRODUCT_NAME = iPhonePushMessager;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -533,14 +541,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "4_CODEAL/4_CODEAL-Prefix.pch";
-				INFOPLIST_FILE = "4_CODEAL/4_CODEAL-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "4_CODEAL/iPhonePushMessager-Prefix.pch";
+				INFOPLIST_FILE = "4_CODEAL/iPhonePushMessager-Info.plist";
+				PRODUCT_NAME = iPhonePushMessager;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -560,8 +571,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "4_CODEALTests/4_CODEALTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "4_CODEALTests/iPhonePushMessagerTests-Info.plist";
+				PRODUCT_NAME = iPhonePushMessagerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -578,8 +589,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "4_CODEAL/4_CODEAL-Prefix.pch";
-				INFOPLIST_FILE = "4_CODEALTests/4_CODEALTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "4_CODEALTests/iPhonePushMessagerTests-Info.plist";
+				PRODUCT_NAME = iPhonePushMessagerTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -588,7 +599,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2EFAA5381956C71000E40081 /* Build configuration list for PBXProject "4_CODEAL" */ = {
+		2EFAA5381956C71000E40081 /* Build configuration list for PBXProject "iPhonePushMessager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EFAA56D1956C71000E40081 /* Debug */,
@@ -597,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EFAA56F1956C71000E40081 /* Build configuration list for PBXNativeTarget "4_CODEAL" */ = {
+		2EFAA56F1956C71000E40081 /* Build configuration list for PBXNativeTarget "iPhonePushMessager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EFAA5701956C71000E40081 /* Debug */,
@@ -606,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EFAA5721956C71000E40081 /* Build configuration list for PBXNativeTarget "4_CODEALTests" */ = {
+		2EFAA5721956C71000E40081 /* Build configuration list for PBXNativeTarget "iPhonePushMessagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EFAA5731956C71000E40081 /* Debug */,
