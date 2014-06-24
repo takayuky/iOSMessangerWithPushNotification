@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "OwnMessage.h"
 #import "OtherMessage.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
@@ -61,6 +62,7 @@ int _messageHeight = 150;
 
 - (IBAction)ownBtnPush:(id)sender {
     [self setOwnMessageViewWithMessage:@"I'm Own!"];
+    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:@"Hello World!"];
 }
 
 - (IBAction)otherBtnPush:(id)sender {
