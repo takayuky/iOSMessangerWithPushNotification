@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // ****************************************************************************
+    // Uncomment and fill in with your Parse credentials:
+    [Parse setApplicationId:@"X7xu5qRzoMuLBGH0zUdqN0OvtDlWQIJvuRNimYNk" clientKey:@"vw2PFbuZXRIHuoVdwHRxI4AyYu4KGbPgUgRU35ew"];
+    // ****************************************************************************
+    
     // Override point for customization after application launch.
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
+    
     return YES;
 }
 							
