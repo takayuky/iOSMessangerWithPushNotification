@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound];
     
+    self.viewController = (ViewController*)self.window.rootViewController;
     return YES;
 }
 
@@ -34,6 +35,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken {
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
+    [self.viewController setOtherMessageWithText:(NSString*)userInfo[@"aps"][@"alert"]];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

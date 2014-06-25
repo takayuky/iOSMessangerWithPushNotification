@@ -38,6 +38,10 @@ int _messageHeight = 150;
     
 }
 
+- (void) setOtherMessageWithText:(NSString *)message {
+    [self setOtherMessageViewWithMessage:message];
+}
+
 - (void)setOwnMessageViewWithMessage:(NSString*)message {
     OwnMessage *ownMessageView = [[OwnMessage alloc] init];
     ownMessageView.frame = CGRectMake(0, _scrollHeight, 320, 140);
