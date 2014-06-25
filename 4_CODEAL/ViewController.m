@@ -19,7 +19,7 @@
 
 @implementation ViewController
 
-int _scrollHeight = 30;
+int _scrollHeight = 10;
 int _messageHeight = 150;
 
 - (void)viewDidLoad
