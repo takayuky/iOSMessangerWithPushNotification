@@ -64,13 +64,9 @@ int _messageHeight = 150;
     [self scrollToBottom];
 }
 
-- (IBAction)ownBtnPush:(id)sender {
-    [self setOwnMessageViewWithMessage:@"I'm Own!"];
-    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:@"Hello World!"];
-}
-
-- (IBAction)otherBtnPush:(id)sender {
-    [self setOtherMessageViewWithMessage:@"I'm Other!"];
+- (IBAction)sentText:(UITextField *)sender {
+    [self setOwnMessageViewWithMessage:sender.text];
+    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
 }
 
 - (void) scrollToBottom {
