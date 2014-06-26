@@ -35,7 +35,7 @@ int _messageHeight = 150;
         
         //[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:ownMessageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     }
-    
+    self.scrollView.userInteractionEnabled = NO;
 }
 
 - (void) setOtherMessageWithText:(NSString *)message {
@@ -79,6 +79,11 @@ int _messageHeight = 150;
     [super viewDidAppear:animated];
     
     [self.scrollView setScrollEnabled:YES];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
