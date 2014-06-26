@@ -9,17 +9,22 @@
 #import "ViewController.h"
 #import "OwnMessage.h"
 #import "OtherMessage.h"
+#import "MyScrollView.h"
+#import <Parse/Parse.h>
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet MyScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
 @implementation ViewController
 
-int _scrollHeight = 30;
+int _scrollHeight = 10;
 int _messageHeight = 150;
+int _keyboardheight = 0;
 
 - (void)viewDidLoad
 {
@@ -34,7 +39,10 @@ int _messageHeight = 150;
         
         //[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:ownMessageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     }
-    
+}
+
+- (void) setOtherMessageWithText:(NSString *)message {
+    [self setOtherMessageViewWithMessage:message];
 }
 
 - (void)setOwnMessageViewWithMessage:(NSString*)message {
@@ -58,13 +66,9 @@ int _messageHeight = 150;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
-
-- (IBAction)ownBtnPush:(id)sender {
-    [self setOwnMessageViewWithMessage:@"I'm Own!"];
-}
-
-- (IBAction)otherBtnPush:(id)sender {
-    [self setOtherMessageViewWithMessage:@"I'm Other!"];
+- (IBAction)sendText:(UITextField *)sender {
+    [self setOwnMessageViewWithMessage:sender.text];
+    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
 }
 
 - (void) scrollToBottom {
@@ -77,6 +81,81 @@ int _messageHeight = 150;
     [super viewDidAppear:animated];
     
     [self.scrollView setScrollEnabled:YES];
+}
+
+//- (void)keyboardWillShow {
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    NSDictionary* info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    int heightDiff = kbSize.height - _keyboardheight;
+    _keyboardheight = kbSize.height;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3]; // if you want to slide up the view
+    
+    CGRect scrollRect = self.scrollView.frame;
+    CGRect textRect = self.textField.frame;
+    
+    scrollRect.size.height -= heightDiff;
+    textRect.origin.y -= heightDiff;
+    
+    self.scrollView.frame = scrollRect;
+    self.textField.frame = textRect;
+    
+    [UIView commitAnimations];
+    [self scrollToBottom];
+    
+    NSLog(@"keyboardWillShow");
+    NSLog(@"heightDiff : %d", heightDiff);
+    NSLog(@"_keyboardDiff : %d", _keyboardheight);
+}
+
+- (void)keyboardWillHide {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3]; // if you want to slide up the view
+    
+    CGRect scrollRect = self.scrollView.frame;
+    CGRect textRect = self.textField.frame;
+    
+    scrollRect.size.height += _keyboardheight;
+    textRect.origin.y += _keyboardheight;
+    
+    self.scrollView.frame = scrollRect;
+    self.textField.frame = textRect;
+    
+    [UIView commitAnimations];
+    [self scrollToBottom];
+    _keyboardheight = 0;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // register for keyboard notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    // unregister for keyboard notifications while not visible.
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
 }
 
 - (void)didReceiveMemoryWarning

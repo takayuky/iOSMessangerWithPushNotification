@@ -16,42 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-vy-cj0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="538"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG7-hX-Nm3">
-                                <rect key="frame" x="0.0" y="538" width="160" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85Z-cj-LLk" customClass="MyScrollView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="474"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Other">
-                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="otherBtnPush:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aO7-de-5fA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-vw-Sls">
-                                <rect key="frame" x="160" y="538" width="160" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Er5-C1-COJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="YMJ-0n-X1o"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="iPhonePushMessanger" id="IXm-dG-3aA"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBa-2Z-wrv">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Own">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="ownBtnPush:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SBd-w9-jrj"/>
+                                    <action selector="sendText:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="E38-6x-yia"/>
                                 </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gwa-vy-cj0" secondAttribute="bottom" constant="30" id="Ev3-F8-UIk"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PFg-fc-Q5R"/>
-                            <constraint firstAttribute="trailing" secondItem="Gwa-vy-cj0" secondAttribute="trailing" id="Zcg-2V-u2d"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dNK-K6-lFE"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5s7-kR-PkL"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="top" secondItem="85Z-cj-LLk" secondAttribute="bottom" id="G15-zK-o0R"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="bottom" secondItem="85Z-cj-LLk" secondAttribute="top" id="JJN-N5-D4s"/>
+                            <constraint firstAttribute="bottom" secondItem="YBa-2Z-wrv" secondAttribute="bottom" id="hgk-WA-6Ub"/>
+                            <constraint firstAttribute="trailing" secondItem="YBa-2Z-wrv" secondAttribute="trailing" id="i5x-Op-gJr"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="trailing" secondItem="YBa-2Z-wrv" secondAttribute="trailing" id="ioR-D5-gXk"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="jAE-vk-wcC"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="leading" secondItem="YBa-2Z-wrv" secondAttribute="leading" id="sqY-m5-hYm"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="trailing" secondItem="85Z-cj-LLk" secondAttribute="trailing" id="tAQ-fg-tXD"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="leading" secondItem="85Z-cj-LLk" secondAttribute="leading" id="uxV-03-yS6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollView" destination="Gwa-vy-cj0" id="WIf-Pn-r0C"/>
+                        <outlet property="scrollView" destination="85Z-cj-LLk" id="Jpo-Bp-sOg"/>
+                        <outlet property="textField" destination="YBa-2Z-wrv" id="ZFp-zK-Lgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
