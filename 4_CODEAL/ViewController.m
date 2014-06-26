@@ -24,7 +24,7 @@
 
 int _scrollHeight = 10;
 int _messageHeight = 150;
-int _keyboardheight = 180;
+int _keyboardheight = 0;
 
 - (void)viewDidLoad
 {
@@ -87,7 +87,9 @@ int _keyboardheight = 180;
 - (void)keyboardWillShow:(NSNotification*)notification {
     
     NSDictionary* info = [notification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    int heightDiff = kbSize.height - _keyboardheight;
     _keyboardheight = kbSize.height;
     
     [UIView beginAnimations:nil context:NULL];
@@ -96,14 +98,18 @@ int _keyboardheight = 180;
     CGRect scrollRect = self.scrollView.frame;
     CGRect textRect = self.textField.frame;
     
-    scrollRect.size.height -= _keyboardheight;
-    textRect.origin.y -= _keyboardheight;
+    scrollRect.size.height -= heightDiff;
+    textRect.origin.y -= heightDiff;
     
     self.scrollView.frame = scrollRect;
     self.textField.frame = textRect;
     
     [UIView commitAnimations];
     [self scrollToBottom];
+    
+    NSLog(@"keyboardWillShow");
+    NSLog(@"heightDiff : %d", heightDiff);
+    NSLog(@"_keyboardDiff : %d", _keyboardheight);
 }
 
 - (void)keyboardWillHide {
@@ -121,6 +127,7 @@ int _keyboardheight = 180;
     
     [UIView commitAnimations];
     [self scrollToBottom];
+    _keyboardheight = 0;
 }
 
 - (void)viewWillAppear:(BOOL)animated
