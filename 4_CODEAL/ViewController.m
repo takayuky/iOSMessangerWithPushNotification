@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet MyScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
 
 @implementation ViewController
@@ -64,8 +66,7 @@ int _messageHeight = 150;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
-
-- (IBAction)sentText:(UITextField *)sender {
+- (IBAction)sendText:(UITextField *)sender {
     [self setOwnMessageViewWithMessage:sender.text];
     [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
 }
@@ -80,11 +81,6 @@ int _messageHeight = 150;
     [super viewDidAppear:animated];
     
     [self.scrollView setScrollEnabled:YES];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning

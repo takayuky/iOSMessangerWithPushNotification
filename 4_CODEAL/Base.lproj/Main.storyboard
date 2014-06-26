@@ -37,7 +37,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="sentText:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="S9k-tR-U1u"/>
+                                    <action selector="sendText:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="E38-6x-yia"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -57,6 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="85Z-cj-LLk" id="Jpo-Bp-sOg"/>
+                        <outlet property="textField" destination="YBa-2Z-wrv" id="ZFp-zK-Lgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
