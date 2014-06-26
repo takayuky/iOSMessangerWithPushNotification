@@ -24,7 +24,6 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (!self.dragging) {
         [self.nextResponder touchesEnded: touches withEvent:event];
-        NSLog(@"touchEnded");
         [self endEditing:YES];
     }
     [super touchesEnded: touches withEvent: event];
