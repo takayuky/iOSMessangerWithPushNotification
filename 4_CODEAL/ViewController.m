@@ -9,11 +9,12 @@
 #import "ViewController.h"
 #import "OwnMessage.h"
 #import "OtherMessage.h"
+#import "MyScrollView.h"
 #import <Parse/Parse.h>
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet MyScrollView *scrollView;
 
 @end
 
@@ -35,7 +36,7 @@ int _messageHeight = 150;
         
         //[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:ownMessageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     }
-    self.scrollView.userInteractionEnabled = NO;
+    //self.scrollView.userInteractionEnabled = NO;
 }
 
 - (void) setOtherMessageWithText:(NSString *)message {
@@ -81,7 +82,7 @@ int _messageHeight = 150;
     [self.scrollView setScrollEnabled:YES];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
 }

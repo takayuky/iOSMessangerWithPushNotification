@@ -26,10 +26,11 @@
                                     <navigationItem title="iPhonePushMessanger" id="IXm-dG-3aA"/>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwa-vy-cj0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85Z-cj-LLk" customClass="MyScrollView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="474"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </scrollView>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBa-2Z-wrv">
                                 <rect key="frame" x="0.0" y="538" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,20 +43,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Gwa-vy-cj0" secondAttribute="bottom" constant="30" id="Ev3-F8-UIk"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PFg-fc-Q5R"/>
-                            <constraint firstAttribute="trailing" secondItem="Gwa-vy-cj0" secondAttribute="trailing" id="Zcg-2V-u2d"/>
-                            <constraint firstItem="Er5-C1-COJ" firstAttribute="leading" secondItem="Gwa-vy-cj0" secondAttribute="leading" id="c2h-z3-aw9"/>
-                            <constraint firstItem="Gwa-vy-cj0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="dNK-K6-lFE"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5s7-kR-PkL"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="top" secondItem="85Z-cj-LLk" secondAttribute="bottom" id="G15-zK-o0R"/>
+                            <constraint firstItem="Er5-C1-COJ" firstAttribute="bottom" secondItem="85Z-cj-LLk" secondAttribute="top" id="JJN-N5-D4s"/>
                             <constraint firstAttribute="bottom" secondItem="YBa-2Z-wrv" secondAttribute="bottom" id="hgk-WA-6Ub"/>
+                            <constraint firstAttribute="trailing" secondItem="YBa-2Z-wrv" secondAttribute="trailing" id="i5x-Op-gJr"/>
                             <constraint firstItem="Er5-C1-COJ" firstAttribute="trailing" secondItem="YBa-2Z-wrv" secondAttribute="trailing" id="ioR-D5-gXk"/>
                             <constraint firstItem="Er5-C1-COJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="jAE-vk-wcC"/>
-                            <constraint firstItem="Er5-C1-COJ" firstAttribute="trailing" secondItem="Gwa-vy-cj0" secondAttribute="trailing" id="jGI-wB-hJy"/>
                             <constraint firstItem="Er5-C1-COJ" firstAttribute="leading" secondItem="YBa-2Z-wrv" secondAttribute="leading" id="sqY-m5-hYm"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="trailing" secondItem="85Z-cj-LLk" secondAttribute="trailing" id="tAQ-fg-tXD"/>
+                            <constraint firstItem="YBa-2Z-wrv" firstAttribute="leading" secondItem="85Z-cj-LLk" secondAttribute="leading" id="uxV-03-yS6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollView" destination="Gwa-vy-cj0" id="WIf-Pn-r0C"/>
+                        <outlet property="scrollView" destination="85Z-cj-LLk" id="Jpo-Bp-sOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

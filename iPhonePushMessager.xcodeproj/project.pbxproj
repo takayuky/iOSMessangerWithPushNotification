@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4247D2195C1CFE0075C944 /* MyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4247D1195C1CFE0075C944 /* MyScrollView.m */; };
 		2EFAA5411956C71000E40081 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFAA5401956C71000E40081 /* Foundation.framework */; };
 		2EFAA5431956C71000E40081 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFAA5421956C71000E40081 /* CoreGraphics.framework */; };
 		2EFAA5451956C71000E40081 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFAA5441956C71000E40081 /* UIKit.framework */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E4247D0195C1CFE0075C944 /* MyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollView.h; sourceTree = "<group>"; };
+		2E4247D1195C1CFE0075C944 /* MyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollView.m; sourceTree = "<group>"; };
 		2EFAA53D1956C71000E40081 /* iPhonePushMessager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhonePushMessager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFAA5401956C71000E40081 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2EFAA5421956C71000E40081 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -210,6 +213,8 @@
 				2EFAA5A41958004700E40081 /* OtherMessage.h */,
 				2EFAA5A51958004800E40081 /* OtherMessage.m */,
 				2EFAA5A71958006400E40081 /* OtherMessage.xib */,
+				2E4247D0195C1CFE0075C944 /* MyScrollView.h */,
+				2E4247D1195C1CFE0075C944 /* MyScrollView.m */,
 				2EFAA5581956C71000E40081 /* Images.xcassets */,
 				2EFAA5471956C71000E40081 /* Supporting Files */,
 			);
@@ -395,6 +400,7 @@
 				2EFAA5511956C71000E40081 /* AppDelegate.m in Sources */,
 				2EFAA5A61958004800E40081 /* OtherMessage.m in Sources */,
 				2EFAA54D1956C71000E40081 /* main.m in Sources */,
+				2E4247D2195C1CFE0075C944 /* MyScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
