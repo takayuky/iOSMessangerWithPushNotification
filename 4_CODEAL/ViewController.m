@@ -33,15 +33,15 @@ int _keyboardheight = 0;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    /*
     for (int i = 0; i < 5; i++) {
         if (i % 2 == 0) {
             [self setOwnMessageViewWithMessage:@"I'm Own!"];
         } else {
             [self setOtherMessageViewWithMessage:@"I'm Other!"];
         }
-        
-        //[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:ownMessageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     }
+     */
     self.textField.delegate = self;
 }
 
@@ -74,8 +74,10 @@ int _keyboardheight = 0;
 - (BOOL)textFieldShouldReturn:(UITextField*)sender
 {
     if (![sender.text isEqual: @""]) {
+        //set message
         [self setOwnMessageViewWithMessage:sender.text];
-        [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
+        //push message
+        [PFPush sendPushMessageToChannelInBackground:@"emulator" withMessage:sender.text];
         sender.text = @"";
     }
     
@@ -120,6 +122,7 @@ int _keyboardheight = 0;
     [UIView commitAnimations];
     [self scrollToBottom];
     NSLog(@"keyboardWillShow");
+    NSLog(@"%f", self.scrollView.frame.size.height + self.scrollView.contentOffset.y - self.scrollView.contentSize.height);
 }
 
 - (void)keyboardWillHide {
@@ -136,7 +139,6 @@ int _keyboardheight = 0;
     self.textField.frame = textRect;
     
     [UIView commitAnimations];
-    [self scrollToBottom];
     _keyboardheight = 0;
     NSLog(@"keyboardWillHide");
 }
