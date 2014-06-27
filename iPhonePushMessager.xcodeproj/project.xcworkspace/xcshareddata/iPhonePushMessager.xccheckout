@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2941E89D-3CAE-444E-8F17-DE7CEEF35303</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iPhonePushMessager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E24D3498-7ED2-433E-8DD4-DDD352E436AD</key>
+		<string>https://github.com/TakayukiSakai/iOSMessangerWithPushNotification.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iPhonePushMessager.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E24D3498-7ED2-433E-8DD4-DDD352E436AD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/TakayukiSakai/iOSMessangerWithPushNotification.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E24D3498-7ED2-433E-8DD4-DDD352E436AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E24D3498-7ED2-433E-8DD4-DDD352E436AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>4_CODEAL</string>
+		</dict>
+	</array>
+</dict>
+</plist>

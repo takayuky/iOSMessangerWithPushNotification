@@ -25,13 +25,26 @@
         NSArray *array = [nib instantiateWithOwner:self options:nil];
         self = [array objectAtIndex:0];
         
-        [self.label setTextAlignment:NSTextAlignmentRight];
+        [self.label setTextAlignment:NSTextAlignmentLeft];
     }
     return self;
 }
 
 - (void) setMessage:(NSString *)message {
     self.label.text = message;
+    
+    // fit size to the length of the text
+    NSDictionary *attributeDic = @{NSFontAttributeName:self.label.font};
+    CGSize size = [self.label.text boundingRectWithSize:CGSizeMake(200, CGFLOAT_MAX)
+                              options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine
+                           attributes:attributeDic
+                              context:nil].size;
+    CGRect labelFrame = [self.label frame];
+    CGRect viewFrame = [self frame];
+    labelFrame.size = size;
+    viewFrame.size = CGSizeMake(320, size.height + 20);
+    [self.label setFrame:labelFrame];
+    [self setFrame:viewFrame];
 }
 
 /*

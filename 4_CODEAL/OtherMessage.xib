@@ -7,24 +7,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="qWx-MZ-EOR" customClass="OtherMessage">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="user_offline_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="aai-sI-aKp">
-                    <rect key="frame" x="33" y="60" width="16" height="16"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user_offline_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="aai-sI-aKp">
+                    <rect key="frame" x="10" y="10" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="0RC-em-37a"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYa-8d-u6R">
-                    <rect key="frame" x="71" y="59" width="42" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="218" translatesAutoresizingMaskIntoConstraints="NO" id="uYa-8d-u6R">
+                    <rect key="frame" x="48" y="10" width="218" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="0.89906233569573568" green="1" blue="0.90855080513693121" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="aai-sI-aKp" firstAttribute="leading" secondItem="qWx-MZ-EOR" secondAttribute="leading" constant="33" id="kNd-0c-y1b"/>
-                <constraint firstItem="uYa-8d-u6R" firstAttribute="leading" secondItem="aai-sI-aKp" secondAttribute="trailing" constant="22" id="y4c-Xi-PcV"/>
+                <constraint firstItem="uYa-8d-u6R" firstAttribute="centerY" secondItem="qWx-MZ-EOR" secondAttribute="centerY" id="0cb-WN-Ac5"/>
+                <constraint firstItem="uYa-8d-u6R" firstAttribute="leading" secondItem="aai-sI-aKp" secondAttribute="trailing" constant="22" id="2np-Ft-Q4Y"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="top" secondItem="uYa-8d-u6R" secondAttribute="top" id="SZH-Kb-hcz"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="top" secondItem="qWx-MZ-EOR" secondAttribute="top" constant="10" id="dR5-Eu-JAI"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="leading" secondItem="qWx-MZ-EOR" secondAttribute="leading" constant="10" id="usb-bc-yAw"/>
             </constraints>
             <connections>
                 <outlet property="label" destination="uYa-8d-u6R" id="5YS-1h-DAU"/>
