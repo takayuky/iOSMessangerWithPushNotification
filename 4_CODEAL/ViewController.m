@@ -13,7 +13,7 @@
 #import <Parse/Parse.h>
 
 #define MARGIN_TOP 10
-#define SPACE_BETWEEN_MESSAGE 5
+#define SPACE_BETWEEN_MESSAGE 10
 
 @interface ViewController ()
 
@@ -42,6 +42,7 @@ int _keyboardheight = 0;
         
         //[self.scrollView addConstraint:[NSLayoutConstraint constraintWithItem:ownMessageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scrollView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     }
+    self.textField.delegate = self;
 }
 
 - (void) setOtherMessageWithText:(NSString *)message {
@@ -54,7 +55,7 @@ int _keyboardheight = 0;
     [ownMessageView setMessage:message];
     [self.scrollView addSubview:ownMessageView];
     
-    _scrollHeight += ownMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE * 2;
+    _scrollHeight += ownMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
@@ -65,19 +66,27 @@ int _keyboardheight = 0;
     [otherMessageView setMessage:message];
     [self.scrollView addSubview:otherMessageView];
     
-    _scrollHeight += otherMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE * 2;
+    _scrollHeight += otherMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
-- (IBAction)sendText:(UITextField *)sender {
-    [self setOwnMessageViewWithMessage:sender.text];
-    [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
+
+- (BOOL)textFieldShouldReturn:(UITextField*)sender
+{
+    if (![sender.text isEqual: @""]) {
+        [self setOwnMessageViewWithMessage:sender.text];
+        [PFPush sendPushMessageToChannelInBackground:@"global" withMessage:sender.text];
+        sender.text = @"";
+    }
+    
+    // 引き続き既定の動作を行わせたい場合に YES を返します。
+    return NO;
 }
 
 - (void) scrollToBottom {
     if (self.scrollView.frame.size.height < self.scrollView.contentSize.height) {
         CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
-    [self.scrollView setContentOffset:bottomOffset animated:YES];
+        [self.scrollView setContentOffset:bottomOffset animated:YES];
     }
 }
 
@@ -88,7 +97,6 @@ int _keyboardheight = 0;
     [self.scrollView setScrollEnabled:YES];
 }
 
-//- (void)keyboardWillShow {
 - (void)keyboardWillShow:(NSNotification*)notification {
     
     NSDictionary* info = [notification userInfo];
@@ -111,6 +119,7 @@ int _keyboardheight = 0;
     
     [UIView commitAnimations];
     [self scrollToBottom];
+    NSLog(@"keyboardWillShow");
 }
 
 - (void)keyboardWillHide {
@@ -129,6 +138,7 @@ int _keyboardheight = 0;
     [UIView commitAnimations];
     [self scrollToBottom];
     _keyboardheight = 0;
+    NSLog(@"keyboardWillHide");
 }
 
 - (void)viewWillAppear:(BOOL)animated

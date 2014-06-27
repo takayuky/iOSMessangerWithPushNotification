@@ -14,7 +14,7 @@
                     <rect key="frame" x="33" y="10" width="16" height="16"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="16" id="n9j-R0-dUe"/>
+                        <constraint firstAttribute="width" constant="16" id="0RC-em-37a"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="218" translatesAutoresizingMaskIntoConstraints="NO" id="uYa-8d-u6R">
@@ -27,11 +27,11 @@
             <color key="backgroundColor" red="0.89906233569573568" green="1" blue="0.90855080513693121" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="uYa-8d-u6R" firstAttribute="centerY" secondItem="qWx-MZ-EOR" secondAttribute="centerY" id="0cb-WN-Ac5"/>
-                <constraint firstItem="uYa-8d-u6R" firstAttribute="leading" secondItem="aai-sI-aKp" secondAttribute="trailing" constant="22" id="ClE-RF-qG0"/>
-                <constraint firstAttribute="bottom" secondItem="aai-sI-aKp" secondAttribute="bottom" constant="14" id="Y05-Y5-Whg"/>
-                <constraint firstItem="uYa-8d-u6R" firstAttribute="top" secondItem="aai-sI-aKp" secondAttribute="top" id="bmn-mF-WIY"/>
-                <constraint firstItem="aai-sI-aKp" firstAttribute="leading" secondItem="qWx-MZ-EOR" secondAttribute="leading" constant="33" id="mbm-cl-bvW"/>
-                <constraint firstItem="aai-sI-aKp" firstAttribute="top" secondItem="qWx-MZ-EOR" secondAttribute="top" constant="10" id="ueV-j7-oDI"/>
+                <constraint firstItem="uYa-8d-u6R" firstAttribute="leading" secondItem="aai-sI-aKp" secondAttribute="trailing" constant="22" id="2np-Ft-Q4Y"/>
+                <constraint firstAttribute="bottom" secondItem="aai-sI-aKp" secondAttribute="bottom" constant="14" id="IF6-x8-r78"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="top" secondItem="uYa-8d-u6R" secondAttribute="top" id="SZH-Kb-hcz"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="top" secondItem="qWx-MZ-EOR" secondAttribute="top" constant="10" id="dR5-Eu-JAI"/>
+                <constraint firstItem="aai-sI-aKp" firstAttribute="leading" secondItem="qWx-MZ-EOR" secondAttribute="leading" constant="33" id="usb-bc-yAw"/>
                 <constraint firstAttribute="trailing" secondItem="uYa-8d-u6R" secondAttribute="trailing" constant="31" id="w4D-FP-2R9"/>
             </constraints>
             <connections>
