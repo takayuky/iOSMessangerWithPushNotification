@@ -12,6 +12,9 @@
 #import "MyScrollView.h"
 #import <Parse/Parse.h>
 
+#define MARGIN_TOP 10
+#define SPACE_BETWEEN_MESSAGE 5
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet MyScrollView *scrollView;
@@ -22,7 +25,7 @@
 
 @implementation ViewController
 
-int _scrollHeight = 10;
+int _scrollHeight = MARGIN_TOP;
 int _messageHeight = 150;
 int _keyboardheight = 0;
 
@@ -51,7 +54,7 @@ int _keyboardheight = 0;
     [ownMessageView setMessage:message];
     [self.scrollView addSubview:ownMessageView];
     
-    _scrollHeight += _messageHeight;
+    _scrollHeight += ownMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE * 2;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
@@ -62,7 +65,7 @@ int _keyboardheight = 0;
     [otherMessageView setMessage:message];
     [self.scrollView addSubview:otherMessageView];
     
-    _scrollHeight += _messageHeight;
+    _scrollHeight += otherMessageView.frame.size.height + SPACE_BETWEEN_MESSAGE * 2;
     [self.scrollView setContentSize:CGSizeMake(320, _scrollHeight)];
     [self scrollToBottom];
 }
@@ -72,8 +75,10 @@ int _keyboardheight = 0;
 }
 
 - (void) scrollToBottom {
-    CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
+    if (self.scrollView.frame.size.height < self.scrollView.contentSize.height) {
+        CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
     [self.scrollView setContentOffset:bottomOffset animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -106,10 +111,6 @@ int _keyboardheight = 0;
     
     [UIView commitAnimations];
     [self scrollToBottom];
-    
-    NSLog(@"keyboardWillShow");
-    NSLog(@"heightDiff : %d", heightDiff);
-    NSLog(@"_keyboardDiff : %d", _keyboardheight);
 }
 
 - (void)keyboardWillHide {
